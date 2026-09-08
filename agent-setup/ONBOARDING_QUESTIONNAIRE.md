@@ -9,7 +9,16 @@ No sustituye la flexibilidad del agente real: estos criterios son el punto de pa
 ## Antes de preguntar nada
 
 1. Comprueba si ya existe `JOB_SEARCH_CRITERIA.md` en la raíz del repo. Si existe, pregunta primero si quiere **rehacerlo desde cero** o **revisar/editar secciones concretas** — no lo sobrescribas sin confirmación.
-2. Pide el CV actual de la persona (ruta a un PDF o Markdown, o que lo pegue). Conviértelo a Markdown si hace falta (`scripts/pdf_to_md.py`) y guárdalo en `cv/` con el nombre que prefiera (ej. `cv/CV_<MMAAAA>.md`). Este CV es la base para inferir funciones núcleo y stack técnico en la sección de Rol — no lo inventes ni lo completes sin leerlo.
+2. **Importar y adaptar el CV al formato del agente** (probablemente lo primero que te pasen — trátalo con cuidado, no es un simple volcado):
+   1. Pide el CV actual (ruta a un PDF o Markdown, o que lo pegue).
+   2. Si es PDF, extrae el texto en bruto con `scripts/pdf_to_md.py` — este paso solo saca el texto, no lo deja con el formato correcto todavía.
+   3. **Reestructúralo** al formato que usan las plantillas del agente: usa `cv/EJEMPLO_CV.md` como referencia exacta de estructura (cabecera con nombre + contacto, párrafo de resumen, `## Experiencia profesional` con negrita en puesto/empresa/fechas y bullets, `## Formación`, `## Competencias técnicas`, `## Idiomas`). Reorganiza y da forma al contenido real del CV de la persona — **nunca inventes, añadas ni completes** información que no esté en el original; si algo es ambiguo (p. ej. cómo agrupar una habilidad), pregúntalo en vez de decidir solo.
+   4. Pregunta qué tema quiere para este CV **general** (AskUserQuestion, 1 llamada): **`harvard`** (serif, conservador, recomendado por defecto) o **`cv`** (sans-serif, más moderno — coloquialmente "modern"). No asumas uno sin confirmar.
+   5. Guarda el resultado en `cv/CV_<MMAAAA>.md` y renderízalo a PDF para que lo valide antes de seguir:
+      ```
+      python3 scripts/md_to_pdf.py cv/CV_<MMAAAA>.md --theme <harvard|cv>
+      ```
+   6. Este CV (`cv/CV_<MMAAAA>.md`) es la base que usarán después `runbooks/apply_external_job.md` y `apply_batch_jobs.md` para adaptar el CV a cada oferta — también sirve aquí mismo para inferir funciones núcleo y stack técnico en la Ronda 5, así que no avances sin haberlo dejado bien formado y confirmado.
 
 ## Ronda 1 — Datos de contacto y ubicación (AskUserQuestion, 1 llamada)
 
