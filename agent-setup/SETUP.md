@@ -2,6 +2,8 @@
 
 Instalación de una sola vez, antes de poder usar el agente. Sigue los pasos en orden. Todo lo que configures aquí (sesiones de navegador, credenciales OAuth, tokens) es **tuyo y local a tu máquina** — nada de esto forma parte del paquete ni se comparte con nadie.
 
+> **Rutas de este documento** (`scripts/...`, `cv/...`, `candidaturas/...`) son relativas a la **raíz del repo clonado**, no a esta carpeta `agent-setup/`. Ejecuta los comandos desde ahí (un nivel por encima de donde está este fichero).
+
 ## 0. Requisitos previos
 
 - **Claude Code** instalado y funcionando.
