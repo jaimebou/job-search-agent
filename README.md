@@ -38,6 +38,13 @@ No es una idea teórica: es la extracción de un flujo que llevamos usando y dep
 
 Este repo vive en GitHub para eso: mejoras futuras en el motor (nuevos patrones de ATS, ajustes a un runbook, nuevas fuentes de búsqueda) se comparten con un simple `git pull`. Cualquier persona que use este paquete puede además evolucionar sus propios runbooks locales igual que hicimos nosotros: si el agente comete un error o hay un paso que falta, se corrige el runbook en el momento, no se reintenta ciegamente la próxima vez — y si el cambio es de interés general, un PR a este repo lo comparte con todo el mundo que lo use.
 
+### Cómo contribuir
+
+Este es un repo privado de cuenta personal gratuita, así que GitHub no permite forzar la protección de la rama `main` (esa función requiere GitHub Pro o repo público). Por convención, no por imposición técnica:
+
+- **No empujes directo a `main`.** Crea una rama y abre un Pull Request.
+- El propietario del repo revisa y mergea. Si algo es urgente, avisa aparte.
+
 ## Fuera de alcance (por ahora)
 
 - Monitorización autónoma/periódica — el agente no busca ni revisa el email por su cuenta sin que se lo pidas en cada sesión.
