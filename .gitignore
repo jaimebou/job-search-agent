@@ -15,9 +15,11 @@ candidaturas/SCREENED.md
 # no matchea este patrón (no empieza por dígitos) y se queda versionada como referencia.
 candidaturas/[0-9][0-9][0-9][0-9]-[0-9][0-9]/
 
-# Tu CV real (deja EJEMPLO_CV.md como referencia, pero no subas el tuyo)
-cv/CV_*.md
-cv/CV_*.pdf
+# Tu CV real, cualquiera que sea el nombre de fichero que uses (no depende de
+# seguir la convención CV_<MMAAAA>.md) — deja EJEMPLO_CV.md como referencia
+cv/*.md
+cv/*.pdf
+!cv/EJEMPLO_CV.md
 
 # Python
 __pycache__/

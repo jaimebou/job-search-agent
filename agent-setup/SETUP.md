@@ -4,6 +4,8 @@ Instalación de una sola vez, antes de poder usar el agente. Sigue los pasos en 
 
 > **Rutas de este documento** (`scripts/...`, `cv/...`, `candidaturas/...`) son relativas a la **raíz del repo clonado**, no a esta carpeta `agent-setup/`. Ejecuta los comandos desde ahí (un nivel por encima de donde está este fichero).
 
+**Tus datos reales nunca se pueden subir por accidente, ni siquiera con `git push`.** El `.gitignore` del repo ya excluye tu CV real (`cv/*.md`, salvo el ejemplo), tu log de candidaturas (`candidaturas/TRACKING.md`, `SCREENED.md`), tus carpetas de candidaturas por mes (`candidaturas/AAAA-MM/`, con CVs adaptados y `CREDENCIALES.md` si aplica) y tus criterios (`JOB_SEARCH_CRITERIA.md`). Puedes usar este mismo clon como tu agente de trabajo día a día y seguir haciendo `git pull`/`git push` con normalidad — ver "Repo compartido vs. tu copia local" en el `README.md` para el detalle completo.
+
 ## 0. Requisitos previos
 
 - **Claude Code** instalado y funcionando.
