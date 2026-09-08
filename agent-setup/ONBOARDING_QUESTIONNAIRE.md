@@ -57,7 +57,7 @@ Pregunta, en una sola tanda:
 
 ## Cierre — generar los ficheros
 
-1. Escribe `JOB_SEARCH_CRITERIA.md` en la raíz del repo, con la misma estructura de secciones que `JOB_SEARCH_CRITERIA.template.md` (Ubicación y modalidad, Sector y tamaño de empresa, Consultoras, Rol, Salario, Empresas a excluir, Empresas a vigilar, Dimensiones de búsqueda, Cómo aplico estos criterios), usando las respuestas de las 5 rondas. Añade la fecha de hoy como "última actualización".
-2. Vacía (o crea si no existen) `candidaturas/TRACKING.md` y `candidaturas/SCREENED.md` a partir de las plantillas ya presentes en `candidaturas/` — quita la fila de ejemplo ficticia antes de dejarlo listo para uso real.
+1. Escribe `JOB_SEARCH_CRITERIA.md` en la raíz del repo (fichero local, ignorado por git — nunca se comparte ni se sube), con la misma estructura de secciones que `agent-setup/JOB_SEARCH_CRITERIA.template.md` (Ubicación y modalidad, Sector y tamaño de empresa, Consultoras, Rol, Salario, Empresas a excluir, Empresas a vigilar, Dimensiones de búsqueda, Cómo aplico estos criterios), usando las respuestas de las 5 rondas. Añade la fecha de hoy como "última actualización".
+2. Si no existen ya `candidaturas/TRACKING.md` y `candidaturas/SCREENED.md` (también locales, ignorados por git), créalos copiando `candidaturas/TRACKING.template.md` y `candidaturas/SCREENED.template.md` y quitando la fila/filas de ejemplo ficticias. **No edites los `.template.md`** — esos son del repo compartido. Si ya existen (estás revisando criterios, no instalando por primera vez), no los toques.
 3. Confirma con un resumen breve de lo configurado, y recuérdale que puede pedir "revisa mis criterios" en cualquier momento para reabrir este cuestionario en modo edición.
 4. Indícale explícitamente que ya puede activar el agente con `runbooks/start_job_agent.md`.

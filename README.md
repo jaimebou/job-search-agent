@@ -18,13 +18,26 @@ No es una idea teórica: es la extracción de un flujo que llevamos usando y dep
 | [`runbooks/apply_external_job.md`](runbooks/apply_external_job.md) | Cómo aplica a una oferta concreta, de principio a fin. |
 | [`runbooks/apply_batch_jobs.md`](runbooks/apply_batch_jobs.md) | Cómo aplica a varias ofertas a la vez, en paralelo. |
 | [`runbooks/check_status.md`](runbooks/check_status.md) | Cómo revisa el estado de tus candidaturas ya enviadas (vía email). |
-| `candidaturas/TRACKING.md`, `SCREENED.md` | Tu log de candidaturas y el ledger de ofertas ya vistas — se van rellenando sesión a sesión (plantillas vacías con una fila de ejemplo ficticia). |
-| `candidaturas/2026-01-EJEMPLO/AcmeCorp/` | Ejemplo de cómo queda la carpeta de una candidatura concreta. |
-| `cv/EJEMPLO_CV.md` | CV de ejemplo (persona ficticia) en el formato que usa el agente para adaptar tu CV a cada oferta. |
+| `candidaturas/TRACKING.template.md`, `SCREENED.template.md` | Plantillas versionadas en el repo. El onboarding las copia a `TRACKING.md`/`SCREENED.md` (**ignorados por git**, solo en tu máquina) para que tu log real de candidaturas nunca se suba. |
+| `candidaturas/EJEMPLO/AcmeCorp/` | Ejemplo de cómo queda la carpeta de una candidatura concreta. Tus carpetas reales (`candidaturas/AAAA-MM/Empresa/`) también están ignoradas por git. |
+| `cv/EJEMPLO_CV.md` | CV de ejemplo (persona ficticia) en el formato que usa el agente para adaptar tu CV a cada oferta. Tu CV real (`cv/CV_<MMAAAA>.md`) también está ignorado por git. |
 | `scripts/` | Scripts Python para convertir CV Markdown↔PDF y subir ficheros a Google Drive. |
 | `CHANGELOG.md` | Versionado de este paquete. |
 
 **Lo que este paquete NO incluye, a propósito:** ninguna credencial, cookie de sesión, dato personal, candidatura real ni CV real mío. Cada persona autentica sus propias cuentas (LinkedIn, InfoJobs, Indeed, Google) en su propio navegador, y crea su propio proyecto de Google Cloud si quiere el envío automático a Drive. Ver "Nota de seguridad" en `agent-setup/SETUP.md`.
+
+### Repo compartido vs. tu copia local
+
+Puedes usar este mismo clon como tu agente de trabajo día a día (no solo como plantilla) — el `.gitignore` separa lo que se comparte de lo que es tuyo:
+
+| Se sube al repo (compartido) | Se queda solo en tu máquina (`.gitignore`) |
+|---|---|
+| `agent-setup/`, `runbooks/`, `scripts/` | — |
+| `candidaturas/TRACKING.template.md`, `SCREENED.template.md`, `candidaturas/EJEMPLO/` | `candidaturas/TRACKING.md`, `SCREENED.md`, `candidaturas/AAAA-MM/<Empresa>/` (tus candidaturas reales, CVs adaptados, `CREDENCIALES.md`) |
+| `cv/EJEMPLO_CV.md` | `cv/CV_<MMAAAA>.md` (tu CV real) |
+| — | `JOB_SEARCH_CRITERIA.md` (tus criterios reales, generado a partir de `agent-setup/JOB_SEARCH_CRITERIA.template.md`) |
+
+Así puedes hacer `git pull` para traerte mejoras a los runbooks/scripts, y `git push`/PR para compartir las tuyas, sin arriesgarte a subir nunca tus candidaturas o tu CV.
 
 ## Quickstart
 

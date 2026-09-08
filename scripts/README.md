@@ -30,7 +30,7 @@ Convierte tu CV o carta de presentación en Markdown a un PDF listo para enviar.
 python3 scripts/md_to_pdf.py cv/CV_012026.md --theme harvard
 
 # Cover letter (tema espacioso, estilo carta)
-python3 scripts/md_to_pdf.py candidaturas/2026-01-EJEMPLO/AcmeCorp/CoverLetter_AcmeCorp_012026.md --theme letter
+python3 scripts/md_to_pdf.py candidaturas/2026-01/MiEmpresa/CoverLetter_MiEmpresa_012026.md --theme letter
 
 # Especifica destino
 python3 scripts/md_to_pdf.py cv/CV_012026.md -o cv/CV_012026_v2.pdf

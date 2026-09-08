@@ -2,13 +2,22 @@
 *credentials*.json
 *token*.json
 
-# Candidaturas reales y sus credenciales de portal en texto plano
-candidaturas/*/*/CREDENCIALES.md
-candidaturas/**/*.pdf
+# Tus criterios reales (generados por ONBOARDING_QUESTIONNAIRE.md a partir de
+# agent-setup/JOB_SEARCH_CRITERIA.template.md) — nunca el fichero compartido del repo
+/JOB_SEARCH_CRITERIA.md
+
+# Tu log real de candidaturas (generado a partir de los .template.md de al lado)
+candidaturas/TRACKING.md
+candidaturas/SCREENED.md
+
+# Tus carpetas de candidaturas reales, una por mes (AAAA-MM/Empresa/) — incluye
+# CVs adaptados, cover letters y CREDENCIALES.md de cada una. candidaturas/EJEMPLO/
+# no matchea este patrón (no empieza por dígitos) y se queda versionada como referencia.
+candidaturas/[0-9][0-9][0-9][0-9]-[0-9][0-9]/
 
 # Tu CV real (deja EJEMPLO_CV.md como referencia, pero no subas el tuyo)
-cv/*.pdf
-!cv/EJEMPLO_CV.md
+cv/CV_*.md
+cv/CV_*.pdf
 
 # Python
 __pycache__/

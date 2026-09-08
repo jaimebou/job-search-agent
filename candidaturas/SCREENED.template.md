@@ -1,8 +1,8 @@
-# Ofertas revisadas (ledger de búsqueda)
+# Ofertas revisadas (ledger de búsqueda) — PLANTILLA
+
+> **Este es el fichero plantilla, versionado en el repo.** El cuestionario de `agent-setup/ONBOARDING_QUESTIONNAIRE.md` lo copia a `candidaturas/SCREENED.md` (ignorado por git, solo en tu máquina, sin las filas de ejemplo) la primera vez que lo ejecutas. **No edites este `.template.md` con tus ofertas reales** — edita `SCREENED.md` una vez generado.
 
 Registro de **toda** oferta evaluada en una búsqueda, sea o no candidatura final. Su propósito es que una búsqueda nueva no vuelva a presentar una oferta ya vista — en la misma fuente o en otra distinta. Ver `runbooks/search_jobs.md` para el proceso que rellena esta tabla, y `TRACKING.md` para las que llegaron a candidatura real.
-
-> **Filas de ejemplo (ficticias) más abajo** — bórralas antes de tu primer uso real. El cuestionario de onboarding también las borra si generas este fichero desde ahí.
 
 ## Cómo deduplicar
 
