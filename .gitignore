@@ -1,0 +1,18 @@
+# Credenciales y tokens OAuth — nunca deben salir de tu máquina
+*credentials*.json
+*token*.json
+
+# Candidaturas reales y sus credenciales de portal en texto plano
+candidaturas/*/*/CREDENCIALES.md
+candidaturas/**/*.pdf
+
+# Tu CV real (deja EJEMPLO_CV.md como referencia, pero no subas el tuyo)
+cv/*.pdf
+!cv/EJEMPLO_CV.md
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
